@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Platform</title>
+
+    <form action="create_account" method="POST">
+
+    <!-- {% load static %} -->
+    <form action="{% url 'create_account' %}" method="POST">
+        {% load static %}
+        <!-- <link rel="stylesheet" type="text/css" href="{% static 'path/to/your/css/file.css' %}"> -->
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <form action="{% url 'create_account' %}" method="POST">
+        {% csrf_token %}
+        <!-- Other form fields -->
+        <button type="submit">Create Account</button>
+    </form>
+
+    <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}"> -->
+
+</head>
+
+<body>
+    <header>
+        <h1>Social Media Platform</h1>
+    </header>
+
+    <main>
+        <section id="su">
+            <img src="{% static 'images/logo.png' %}" width="400px" alt="Logo">
+        </section>
+
+        <section id="sec">
+            <h1>Happening Now</h1>
+            <h3>Join Now</h3>
+            <form action="{% url 'create_account' %}" method="POST">
+                {% csrf_token %}
+                <button type="submit">
+                    <img src="{% static 'images/google_icon.png' %}" width="20px"> Sign up with Google
+                </button>
+                <br><br>
+                <button type="submit">
+                    <img src="{% static 'images/apple_icon.png' %}" width="10px"> Sign up with Apple
+                </button>
+                <br><br>
+                <button type="submit" style="background-color: blue;">Create an account</button>
+            </form>
+            <p>By signing up, you agree to the Terms of Service and Privacy Policy, including Cookie Use.</p>
+        </section>
+    </main>
+
+    <footer id="tec">
+        <a href="{% url 'signin' %}">Already have an account?</a><br><br>
+        <button type="submit" onclick="location.href='{% url 'signin' %}'">Sign In</button>
+        <br><br>
+        <a href="#">About</a> &nbsp;
+        <a href="#">Download the App</a> &nbsp;
+        <a href="#">Help Center</a> &nbsp;
+        <a href="#">Terms of Service</a> &nbsp;
+        <a href="#">Privacy Policy</a> &nbsp;
+        <a href="#">Cookie Policy</a> &nbsp;
+        <a href="#">Accessibility</a> &nbsp;
+        <a href="#">Ads Info</a> &nbsp;
+        <a href="#">Blog</a> &nbsp;
+        <a href="#">Careers</a> &nbsp;
+        <a href="#">Brand Resources</a> &nbsp;
+        <a href="#">Advertising</a> &nbsp;
+        <a href="#">Marketing</a> &nbsp;
+        <a href="#">For Business</a> &nbsp;
+        <a href="#">Developers</a> &nbsp;
+        <a href="#">Settings</a> &nbsp;
+    </footer>
+</body>
+
+
+
+
+
+
+</html>
